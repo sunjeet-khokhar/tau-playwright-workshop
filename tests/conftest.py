@@ -1,18 +1,10 @@
 """
 This module contains shared fixtures.
 """
-
-import pytest
-
-from pages.result import DuckDuckGoResultPage
-from pages.search import DuckDuckGoSearchPage
-
+import pytest 
+from pages.search_sk import HomePage
 
 @pytest.fixture
-def result_page(page):
-    return DuckDuckGoResultPage(page)
+def home_page(page):
+    return HomePage(page)
 
-
-@pytest.fixture
-def search_page(page):
-    return DuckDuckGoSearchPage(page)
