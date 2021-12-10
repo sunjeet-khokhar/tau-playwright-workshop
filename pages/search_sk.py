@@ -17,4 +17,8 @@ class HomePage:
     def load(self):
         self.page.goto(self.HOME_URL)
 
-
+    def enter_search_term(self,term):
+        self.page.fill(self.SEARCH_BOX,term)
+        
+    def press_search_button(self):
+        self.page.click(self.SEARCH_BUTTON)
