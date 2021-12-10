@@ -22,8 +22,8 @@ def test_duckduckgo_search(home_page,results_page,common_methods):
     try:
         assert('pickle1' in common_methods.get_title_of_page().lower())
     except AssertionError as e:
-        print("Deesired text was not found in the page title")
-        print("Detailed assertion error as below --> \n" )
+        print("TEST FAILED ! Desired text was not found in the page title")
+        print("Detailed error as below --> \n" )
         print(e)
         
             
