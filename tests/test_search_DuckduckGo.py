@@ -1,3 +1,6 @@
+# to run headed --> python3 -m pytest tests/test_search_DuckduckGo.py  --headed --browser chromium  --slowmo 1000 -s
+#to run headless --> python3 -m pytest tests/test_search_DuckduckGo.py --browser webkit  --slowmo 1000 -s
+
 import pytest
 
 ANIMALS = [
