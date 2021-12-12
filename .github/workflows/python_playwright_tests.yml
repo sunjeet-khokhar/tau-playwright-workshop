@@ -24,6 +24,9 @@ jobs:
         source venv/bin/activate
         sudo python3 -m pip install --upgrade pip
         sudo pip install -r requirements.txt
+        sudo pip3 install playwright
+        sudo pip3 install pytest
+        sudo pip3 install pytest-playwright
     - name: Install browsers 
       run: |
         sudo playwright install
