@@ -20,13 +20,16 @@ jobs:
         python-version: "3.10"
     - name: create virtual env & install dependencies, run tests
       run: |
-        #python3 -m venv venv
-        #source venv/bin/activate
+        python3 -m venv venv
+        source venv/bin/activate
         sudo python3 -m pip install --upgrade pip
         sudo pip install -r requirements.txt
         sudo pip install playwright
         sudo pip install pytest
         sudo pip install pytest-playwright
         sudo playwright install
+        
+    - name : run tests
         python3 -m pytest tests/test_search_DuckduckGo.py
+      
         
