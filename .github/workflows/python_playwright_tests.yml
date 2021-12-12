@@ -30,4 +30,4 @@ jobs:
         sudo playwright install
     - name: Run pytest tests
       run: |
-        python3 -m pytest tests/test_search_DuckduckGo.py
+        pytest tests/test_search_DuckduckGo.py
