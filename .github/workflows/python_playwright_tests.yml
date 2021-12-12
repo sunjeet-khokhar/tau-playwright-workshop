@@ -18,7 +18,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: "3.10"
-    - name: create virtual env & install dependencies
+    - name: create virtual env & install dependencies, run tests
       run: |
         python3 -m venv venv
         source venv/bin/activate
@@ -28,6 +28,5 @@ jobs:
         sudo pip install pytest
         sudo pip install pytest-playwright
         sudo playwright install
-    - name: Run pytest tests
-      run: |
-        pytest tests/test_search_DuckduckGo.py
+        python3 -m pytest tests/test_search_DuckduckGo.py
+        
