@@ -25,6 +25,8 @@ jobs:
         
     - name : installl dependencies and run tests
       run: |
+        #weird but apparently true , have to initiate v env again between run steps !!
+        #source venv/bin/activate
         sudo python3 -m pip install --upgrade pip
         sudo pip install -r requirements.txt
         sudo pip install playwright
