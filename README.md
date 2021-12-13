@@ -1,4 +1,4 @@
-![Workshop card](workshop/images/workshop-card.png)
+[![Python based Playwright tests refactored](https://github.com/sunjeet-khokhar/tau-playwright-workshop/actions/workflows/python_playwright_tests_refactored.yml/badge.svg)](https://github.com/sunjeet-khokhar/tau-playwright-workshop/actions/workflows/python_playwright_tests_refactored.yml)
 
 # tau-playwright-workshop
 
