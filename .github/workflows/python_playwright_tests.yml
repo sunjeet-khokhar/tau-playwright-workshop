@@ -33,6 +33,6 @@ jobs:
         sudo pip install pytest
         sudo pip install pytest-playwright
         sudo playwright install
-        python3 -m pytest tests/test_search_DuckduckGo.py
+        python3 -m pytest -s tests/test_search_DuckduckGo.py
       
         
