@@ -10,7 +10,7 @@ on:
 jobs:
   create-virtualenv-and-run-tests:
 
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -33,7 +33,7 @@ jobs:
         playwright install
     - name : run tests
       run: |
-        python -m pytest -s tests/ --headed
+        python -m pytest -s tests/ 
       
   # Build and push the Docker image
   # push_to_registry:
