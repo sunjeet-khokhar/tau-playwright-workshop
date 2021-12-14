@@ -15,7 +15,14 @@ ANIMALS = [
     'peacock'
 ]
 
-@pytest.mark.parametrize('search_term', ANIMALS)
+TECH = [
+    'jenkins',
+    'rust',
+    'docker',
+    'mozilla'
+]
+
+@pytest.mark.parametrize('search_term', TECH)
 def test_duckduckgo_search(home_page,results_page,common_methods,search_term):
     # Given the DuckDuckGo homepage is displayed
     # when the user searches for a seach term
