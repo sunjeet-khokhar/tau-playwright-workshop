@@ -10,7 +10,7 @@ on:
 jobs:
   create-virtualenv-and-run-tests:
 
-    runs-on: ubuntu-20.4
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
