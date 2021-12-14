@@ -18,9 +18,9 @@ ANIMALS = [
 @pytest.mark.parametrize('search_term', ANIMALS)
 def test_duckduckgo_search(home_page,results_page,common_methods,search_term):
     # Given the DuckDuckGo homepage is diisplayed
-    # when the user searches for pickles
-    #then the search result results are related to pickles 
-    #and the title of the page also reflects pickles 
+    # when the user searches for a seach term
+    #then the search result results are related to that term 
+    #and the title of the page also reflects that term 
     
     ''' Original code that has been refactored to use POM and PyTest fixtures
     page.fill("[id='search_form_input_homepage']",'pickles')
