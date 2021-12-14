@@ -17,7 +17,7 @@ ANIMALS = [
 
 @pytest.mark.parametrize('search_term', ANIMALS)
 def test_duckduckgo_search(home_page,results_page,common_methods,search_term):
-    # Given the DuckDuckGo homepage is diisplayed
+    # Given the DuckDuckGo homepage is displayed
     # when the user searches for a seach term
     #then the search result results are related to that term 
     #and the title of the page also reflects that term 
