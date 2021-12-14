@@ -7,7 +7,7 @@ from playwright.sync_api import Page
 
 class ResultsPage:
     
-    SEARCH_FIELD = "#search_form_input"
+    SEARCH_FIELD= "[id='search_form_input']"
     RESULT_TITLES = "[data-testid=result-title-a]"
     
     

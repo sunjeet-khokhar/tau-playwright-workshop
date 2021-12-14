@@ -16,14 +16,11 @@ ANIMALS = [
 ]
 
 TECH = [
-    'jenkins',
-    'rust',
-    'docker',
-    'mozilla'
+    'butter'
 ]
 
-@pytest.mark.parametrize('search_term',TECH)
-def test_duckduckgo_search(home_page,results_page,common_methods,search_term):
+@pytest.mark.parametrize('search_tech_keywords',TECH)
+def test_duckduckgo_search(home_page,results_page,common_methods,search_tech_keywords):
     # Given the DuckDuckGo homepage is displayed
     # when the user searches for a seach term
     #then the search result results are related to that term 
@@ -46,9 +43,9 @@ def test_duckduckgo_search(home_page,results_page,common_methods,search_term):
     
     
     home_page.load()
-    home_page.enter_search_term(search_term)
+    home_page.enter_search_term(search_tech_keywords)
     home_page.press_search_button()
-    assert search_term == results_page.get_search_field_value()
+    assert search_tech_keywords == results_page.get_search_field_value()
     #wait for some result titles to load , being defensive
     results_page.wait_for_nth_result_to_load('4')
     page_titles=results_page.get_inner_text_of_all_results()
@@ -58,7 +55,7 @@ def test_duckduckgo_search(home_page,results_page,common_methods,search_term):
         print(t)
         # an example of a flaky test ..ask why?!
         #assert(search_term in t.lower())
-    assert(search_term in common_methods.get_title_of_page().lower())
+    assert(search_tech_keywords in common_methods.get_title_of_page().lower())
         
 
     
