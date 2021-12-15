@@ -20,8 +20,11 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
         registry: docker.io
+    - name: run docker image
         image: sunjeet81/docker_python_playwright:dockerplaywright-from-scratch
-        run: python -m pytest tests/ --browser webkit
+    - name: run pytest    
+        run: |
+          python -m pytest tests/ --browser webkit
 
   # create-virtualenv-and-run-tests:
 
