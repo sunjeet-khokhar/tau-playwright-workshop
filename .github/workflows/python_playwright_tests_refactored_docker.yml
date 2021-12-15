@@ -10,14 +10,13 @@ on:
 jobs:
 
   setup-docker:
+    runs-on: ubuntu-latest
+      steps:
+        - uses: docker-practice/actions-setup-docker@master
+        - run: |
+            set -x
+            docker version
 
-  runs-on: ubuntu-latest
-  steps:
-    - uses: docker-practice/actions-setup-docker@master
-    - run: |
-        set -x
-        docker version
-        
   # create-virtualenv-and-run-tests:
 
   #   runs-on: ubuntu-latest
