@@ -29,10 +29,10 @@ jobs:
         docker run --rm --entrypoint bash dockerplaywright-from-scratch
     - name: check phython installed only for debugging
       run: |
-        python --version
+        python3 --version
     - name: run tests
       run: |
-        python -m pytest tests/ --browser webkit
+        python3 -m pytest tests/ --browser webkit
     - name: exit shell
       run: | 
         exit
