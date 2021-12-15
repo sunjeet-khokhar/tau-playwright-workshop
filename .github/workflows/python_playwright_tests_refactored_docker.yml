@@ -32,9 +32,13 @@ jobs:
       run: |
         docker run --name trivial-search -i dockerplaywright-from-scratch
     - name: more debug do we still have the shell ?
-      run : |
+      run: |
         pwd
         ls
+    - name: execute shell on the container
+      run: |
+        docker exec -it trivial-search bash
+      
 
 
     # - name: invoke shell on docker container
