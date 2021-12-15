@@ -32,6 +32,7 @@ jobs:
         python3 --version
     - name: run tests
       run: |
+        pip3 install pytest
         python3 -m pytest tests/ --browser webkit
     - name: exit shell
       run: | 
