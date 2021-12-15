@@ -38,6 +38,7 @@ jobs:
     - name: execute shell on the container
       run: |
         docker exec -d trivial-search bash python3 --version
+        docker exec -d trivial-search bash -m pytest tests/ --browser webkit
       
 
 
