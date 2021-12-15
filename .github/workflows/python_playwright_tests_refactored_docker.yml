@@ -27,9 +27,11 @@ jobs:
     - name: run container & get shell on the container
       run: |
         docker run --rm --entrypoint bash dockerplaywright-from-scratch
-    - name: run tests
+    - name: check phython installed only for debugging
       run: |
         python --version
+    -name: run tests
+        python -m pytest tests/ --browser webkit
     - name: exit shell
       run: | 
         exit

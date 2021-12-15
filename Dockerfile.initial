@@ -17,9 +17,6 @@ COPY requirements.txt .
 # install dependencies
 RUN python -m pip install --upgrade pip
 RUN pip install -r requirements.txt
-RUN pip install playwright
-RUN pip install pytest
-RUN pip install pytest-playwright
 RUN playwright install
 RUN playwright install-deps 
 
