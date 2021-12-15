@@ -29,7 +29,7 @@ jobs:
         docker run --rm --entrypoint bash dockerplaywright-from-scratch
     - name: run tests
       run: |
-        python -m pytest -s tests/ OR python3 -m pytest tests/ --browser webkit
+        python -m pytest -s tests/  --browser webkit
     - name: exit shell
       run: | 
         exit
