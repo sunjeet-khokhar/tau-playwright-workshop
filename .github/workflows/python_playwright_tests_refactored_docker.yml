@@ -9,7 +9,7 @@ on:
 
 jobs:
 
-  setup-docker:
+  setup-and-run-test-in-docker:
 
     runs-on: ubuntu-latest
 
