@@ -37,7 +37,7 @@ jobs:
         ls
     - name: execute shell on the container
       run: |
-        docker exec -it trivial-search bash
+        docker exec trivial-search bash python3 --version
       
 
 
