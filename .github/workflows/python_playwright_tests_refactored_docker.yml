@@ -30,7 +30,8 @@ jobs:
         ls
     - name: run docker container
       run: |
-        docker run --rm --name trivial-search -i dockerplaywright-from-scratch usr/bin/bash
+        docker run --rm --name trivial-search -i dockerplaywright-from-scratch 
+        docker exec -i trivial-search bash python --version
     - name: more debug do we still have the shell ?
       run: |
         pwd
