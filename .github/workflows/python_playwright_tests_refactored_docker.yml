@@ -15,29 +15,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    # - uses: docker-practice/actions-setup-docker@master
-    # - name: set up Docker
-    #   run: |
-    #     set -x
-    #     docker version
-    - name: build image
-      run: |
-        docker build . -f Dockerfile.initial -t dockerplaywright-from-scratch
-     
-    - name: debug commands
-      run: |
-        pwd
-        ls
-    - name: run docker container
-      run: |
-        docker run --rm --name trivial-search -i dockerplaywright-from-scratch
-    - name: exec shell command container
-      run: | 
-        docker exec -i trivial-search bash python --version
-    - name: more debug do we still have the shell ?
-      run: |
-        pwd
-        ls
+    - uses: addnab/docker-run-action@v3
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        registry: docker.io
+        image: docker_python_playwright:dockerplaywright-from-scratch
+        run: python --version
 
     # - name: invoke shell on docker container
     #      docker run --name trivial-search -i dockerplaywright-from-scratch
