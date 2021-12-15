@@ -29,8 +29,10 @@ jobs:
         pwd
         ls
     - name: run docker container
+      run: |
         docker run --name trivial-search -i dockerplaywright-from-scratch
     - name: more debug do we still have the shell ?
+      run : |
         pwd
         ls
 
