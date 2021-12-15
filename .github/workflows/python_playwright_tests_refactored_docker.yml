@@ -24,10 +24,16 @@ jobs:
       run: |
         docker build . -f Dockerfile.initial -t dockerplaywright-from-scratch
      
-    - name: run container & get shell on the container
+    - name: debug commands
       run: |
         pwd
         ls
+    - name: run docker container
+        docker run --name trivial-search -i dockerplaywright-from-scratch
+    - name: more debug do we still have the shell ?
+        pwd
+        ls
+
 
     # - name: invoke shell on docker container
     #      docker run --name trivial-search -i dockerplaywright-from-scratch
