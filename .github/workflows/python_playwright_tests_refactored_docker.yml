@@ -19,7 +19,17 @@ jobs:
       run: |
         set -x
         docker version
-
+    - name: build image
+      run: |
+        docker build . -f Dockerfile.initial -t dockerplaywright-from-scratch
+     
+    - name: run container & get shell on the container
+      run: |
+        docker run --rm -it --entrypoint bash dockerplaywright-from-scratch
+    - name: run tests
+        python -m pytest -s tests/ OR python3 -m pytest tests/ --browser webkit
+    - name: exit shell 
+        exit
   # create-virtualenv-and-run-tests:
 
   #   runs-on: ubuntu-latest
