@@ -31,7 +31,7 @@ jobs:
     - name: run docker container
       run: |
         docker run --rm --name trivial-search -i dockerplaywright-from-scratch
-    - name: exec shell command in container
+    - name: exec shell command container
       run: | 
         docker exec -i trivial-search bash python --version
     - name: more debug do we still have the shell ?

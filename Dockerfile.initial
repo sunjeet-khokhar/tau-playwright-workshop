@@ -41,3 +41,9 @@ COPY tests/ ./tests
 # once you have shell run the tests
 # python -m pytest -s tests/ OR python3 -m pytest tests/ --browser webkit 
 # then --> exit command
+
+
+# to build for push , repo need to pre exist in Docker Hub !
+# docker build . -f Dockerfile.initial -t sunjeet81/docker_python_playwright:dockerplaywright-from-scratch
+# execute push
+# push sunjeet81/docker_python_playwright:dockerplaywright-from-scratch
