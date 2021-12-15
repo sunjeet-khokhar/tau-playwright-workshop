@@ -17,8 +17,8 @@ jobs:
     - uses: actions/checkout@v2
     - uses: addnab/docker-run-action@v3
       with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
         registry: docker.io
         image: docker_python_playwright:dockerplaywright-from-scratch
         run: python --version
