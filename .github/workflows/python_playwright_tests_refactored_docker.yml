@@ -26,15 +26,19 @@ jobs:
      
     - name: run container & get shell on the container
       run: |
-        docker run --name trivial-search -i dockerplaywright-from-scratch
-        docker exec -it trivial-search bash
-        python3 --version
-        python3 -m pytest tests/ --browser webkit
-        exit
-    - name: stop and remove container
-      run: |
-        docker stop trivial-search
-        docker rm trivial-search
+        pwd
+        ls
+
+    # - name: invoke shell on docker container
+    #      docker run --name trivial-search -i dockerplaywright-from-scratch
+    #     docker exec -it trivial-search bash
+    #     python3 --version
+    #     python3 -m pytest tests/ --browser webkit
+    #     exit
+    # - name: stop and remove container
+    #   run: |
+    #     docker stop trivial-search
+    #     docker rm trivial-search
 
   # create-virtualenv-and-run-tests:
 
