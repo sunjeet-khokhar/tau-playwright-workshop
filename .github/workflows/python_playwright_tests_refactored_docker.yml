@@ -26,7 +26,7 @@ jobs:
      
     - name: run container & get shell on the container
       run: |
-        docker run --rm -it --entrypoint bash dockerplaywright-from-scratch
+        docker run --rm --entrypoint bash dockerplaywright-from-scratch
     - name: run tests
       run: |
         python -m pytest -s tests/ OR python3 -m pytest tests/ --browser webkit
