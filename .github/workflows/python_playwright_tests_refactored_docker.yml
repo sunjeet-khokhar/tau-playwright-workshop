@@ -20,7 +20,7 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
         registry: docker.io
-        image: sunjeet81/docker_python_playwright:dockerplaywright-from-scratch   
+        image: ${{DOCKER_HUB_PYTHON_PLAWRIGHT_REPO}}   
         run: |
           echo '~~~~~~ !!! Kicking off Tests now !!! ~~~~~'
           python -m pytest tests/ --browser webkit
