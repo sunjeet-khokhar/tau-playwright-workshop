@@ -24,6 +24,7 @@ jobs:
         run: |
           echo '~~~~~~ !!! Kicking off Tests now !!! ~~~~~'
           python -m pytest tests/ --browser webkit
+          ls
 
   # create-virtualenv-and-run-tests:
 
