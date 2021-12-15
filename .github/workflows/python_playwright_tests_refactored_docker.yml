@@ -22,6 +22,7 @@ jobs:
         registry: docker.io
         image: sunjeet81/docker_python_playwright:dockerplaywright-from-scratch
         run: python --version
+        run: python -m pytest tests/ --browser webkit
 
     # - name: invoke shell on docker container
     #      docker run --name trivial-search -i dockerplaywright-from-scratch
