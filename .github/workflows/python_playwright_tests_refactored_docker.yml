@@ -20,7 +20,7 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
         registry: docker.io
-        image: docker_python_playwright:dockerplaywright-from-scratch
+        image: sunjeet81/docker_python_playwright:dockerplaywright-from-scratch
         run: python --version
 
     # - name: invoke shell on docker container
