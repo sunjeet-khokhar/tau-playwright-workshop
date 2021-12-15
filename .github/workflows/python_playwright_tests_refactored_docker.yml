@@ -15,18 +15,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: docker-practice/actions-setup-docker@master
-    - name: set up Docker
-      run: |
-        set -x
-        docker version
+    # - uses: docker-practice/actions-setup-docker@master
+    # - name: set up Docker
+    #   run: |
+    #     set -x
+    #     docker version
     - name: build image
       run: |
         docker build . -f Dockerfile.initial -t dockerplaywright-from-scratch
      
     - name: run container & get shell on the container
       run: |
-        docker run --name trivial-search -it dockerplaywright-from-scratch
+        docker run --name trivial-search -itd dockerplaywright-from-scratch
         docker exec -it trivial-search bash
         python3 --version
         python3 -m pytest tests/ --browser webkit
