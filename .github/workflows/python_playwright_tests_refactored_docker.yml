@@ -30,13 +30,11 @@ jobs:
         ls
     - name: run docker container
       run: |
-        docker run -d --name trivial-search -i dockerplaywright-from-scratch
+        docker run -it --name trivial-search -i dockerplaywright-from-scratch
     - name: more debug do we still have the shell ?
       run: |
         pwd
         ls
-      
-
 
     # - name: invoke shell on docker container
     #      docker run --name trivial-search -i dockerplaywright-from-scratch

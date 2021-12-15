@@ -25,7 +25,6 @@ RUN playwright install-deps
 COPY pages/ ./pages
 COPY tests/ ./tests
 
-RUN python3 -m pytest tests/ --browser webkit 
 
 #to get this container up & running and running tests 
 # from the directory that has this docker file
