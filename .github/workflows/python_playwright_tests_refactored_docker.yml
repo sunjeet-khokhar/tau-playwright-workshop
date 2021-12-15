@@ -26,17 +26,16 @@ jobs:
      
     - name: run container & get shell on the container
       run: |
-        docker run --rm --entrypoint bash dockerplaywright-from-scratch
-    - name: check phython installed only for debugging
-      run: |
+        docker run --name trivial-search -itd dockerplaywright-from-scratch
+        docker exec -it trivial-search bash
         python3 --version
-    - name: run tests
-      run: |
-        pip3 install pytest
         python3 -m pytest tests/ --browser webkit
-    - name: exit shell
-      run: | 
         exit
+    - name: stop and remove container
+      run: |
+        docker stop trivial-search
+        docker rm trivial-search
+
   # create-virtualenv-and-run-tests:
 
   #   runs-on: ubuntu-latest
