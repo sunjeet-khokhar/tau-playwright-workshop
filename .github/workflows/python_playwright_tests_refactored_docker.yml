@@ -15,9 +15,9 @@ jobs:
 
     steps:
     - name: Check out repo
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
     - name: Pull+ run docker image, and execute Tests
-    - uses: addnab/docker-run-action@v3
+      uses: addnab/docker-run-action@v3
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
